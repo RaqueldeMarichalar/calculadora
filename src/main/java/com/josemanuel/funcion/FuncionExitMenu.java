@@ -9,7 +9,7 @@ public class FuncionExitMenu implements Function<Scanner, Void>{
 
     @Override
     public Void apply(Scanner t) {
-        
+        // lanzamos una excepción propia que nos permita salir del menú;
         throw new ExitMenuException();
 
         //return null;

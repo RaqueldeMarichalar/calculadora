@@ -11,7 +11,7 @@ public class Menu {
     private String input;
     private Map<String, ItemMenu> mapItemMenu;
     
-
+//constructor de la clase Menu
     public Menu(String titulo, String input, Map<String, ItemMenu> mapItemMenu, Scanner sc) {
 
         this.sc = sc;
@@ -20,7 +20,7 @@ public class Menu {
         this.input = input;
 
     }
-
+//creamos metodo void con un foreach que recorre un array
     public void renderiza() {
 
         System.out.println(titulo);
@@ -33,7 +33,7 @@ public class Menu {
 
     }
 
-    public void bucle() throws ExitMenuException {
+    public void bucle() throws ExitMenuException {// contiene un bucle do while con excepcion para salir del menu
 
         
         do{

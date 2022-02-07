@@ -1,5 +1,5 @@
 package com.josemanuel;
-
+//El conjunto de librerías necesarias para que funcione el programa.
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.containsString;
 
-public class SuperCalculadoraTest {
+public class SuperCalculadoraTest { //creo la clase de test para la supercalculadora
     
     private final InputStream systemIn = System.in;
     private final PrintStream systemOut = System.out;
@@ -21,7 +21,7 @@ public class SuperCalculadoraTest {
     private ByteArrayInputStream testIn;
     private ByteArrayOutputStream testOut;
 
-    @BeforeEach
+    @BeforeEach // con esto se ejecuta antes de cada test de una suite
     public void setUpOutput() {
         testOut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(testOut));
@@ -44,10 +44,10 @@ public class SuperCalculadoraTest {
         
         SuperCalculadora.main(new String[0]);
         assertThat(getOutput(), containsString("Resultado: 43") );
-        
+        // 
     }
 
-    @AfterEach
+    @AfterEach// se ejecuta después de otros métodos de prueba
     public void restoreSystemInputOutput() {
         System.setIn(systemIn);
         System.setOut(systemOut);
